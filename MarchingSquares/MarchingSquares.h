@@ -74,6 +74,10 @@ const float V_EPSILON = 1.0f / 256.0f;//阈值，用来判断切点和格点的�
 	x2: 第二个顶点的数组 x 下标
 	y2: 第二个顶点的数组 y 下标
 	v2:  第二个顶点值
+	startLongitude: 起始经度（起始x坐标）
+	longitudeGridSpace: 经度间隔（x坐标间隔）
+	startLatitude: 起始纬度（起始y坐标）
+	latitudeGridSpace: 纬度间隔（y坐标间隔）
  * Output: 包含插值点的坐标及等值线值的Point2D对象
  * Author: gcdofree
  * Date: 2014.11.3
@@ -187,7 +191,7 @@ static isotools::Point2D getCutPoint( int edgeIndex, int i, int j, vector< vecto
  * Output: 若有线段合并，则返回true，否则返回false
  * Author: gcdofree
  * Date: 2014.11.3
-*/
+/************************************************************************/
 static bool isMergeIsoLineAccelerate(isotools::Point2D mid, int type, vector<isotools::Isoline> &pathLines, int &m, vector<int> &pathlineHit)
 {
 	int pathlineSize = pathLines.size();
